@@ -14,7 +14,7 @@ defmodule AdventOfCode.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger, :inets]
+      extra_applications: [:logger, :inets, :public_key, :crypto, :telemetry]
     ]
   end
 
@@ -22,7 +22,7 @@ defmodule AdventOfCode.MixProject do
   defp deps do
     [
       {:benchee, "~> 1.0"},
-      {:ssl_verify_fun, "~> 1.1.7", manager: :rebar3, override: true}
+      {:req, "~> 0.4.0"}
     ]
   end
 end
